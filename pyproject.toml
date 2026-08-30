@@ -1,0 +1,28 @@
+[project]
+name = "bancada-raster"
+version = "1.0.0"
+description = "Motor grafico raster didatico com bancada de inspecao passo a passo"
+requires-python = ">=3.11"
+dependencies = ["gradio>=6,<7"]
+
+[tool.ruff]
+line-length = 79
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "N", "D", "UP", "B", "C4", "SIM"]
+ignore = [
+    "D203",  # conflita com D211
+    "D213",  # conflita com D212
+    "D401",  # docstrings em portugues nao seguem o imperativo ingles
+    "N818",  # sufixo "Error" e convencao inglesa; aqui os nomes sao pt-BR
+]
+
+[tool.ruff.lint.per-file-ignores]
+"testes/*" = ["D102", "D103"]
+"exemplos/*" = ["E402"]
+"bancada.py" = ["E402"]
+"verifica.py" = ["E402"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"

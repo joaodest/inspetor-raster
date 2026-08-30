@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+saidas/*.png
+saidas/*.ppm
+.playwright-cli/
+.ruff_cache/
+.venv/
