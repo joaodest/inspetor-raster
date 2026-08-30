@@ -1,9 +1,9 @@
-"""Bancada Raster: ver o algoritmo desenhar, passo a passo, com numeros.
+"""Inspetor Raster: ver o algoritmo desenhar, passo a passo, com numeros.
 
 CONTRATO DA DIRECAO
 -------------------
 TESE: um algoritmo de rasterizacao nao se entende lendo o codigo, se
-entende vendo o erro acumulado decidir o proximo pixel. A bancada
+entende vendo o erro acumulado decidir o proximo pixel. O inspetor
 recusa a janela de preview que so mostra o resultado pronto.
 
 MUNDO: instrumento de medicao. Chassi grafite com filetes de 1 px,
@@ -219,7 +219,7 @@ def constroi() -> gr.Blocks:
     estados = nucleo.estados_do_catalogo()
     grupos = paineis.rotulos_do_catalogo(estados)
 
-    with gr.Blocks(title="Bancada Raster", fill_width=True) as pagina:
+    with gr.Blocks(title="Inspetor Raster", fill_width=True) as pagina:
         cabecalho = gr.HTML()
 
         with gr.Row(equal_height=False):
@@ -418,7 +418,7 @@ def _recarrega() -> tuple:
 
 
 def executa(porta: int = 7860, abrir: bool = True) -> None:
-    """Sobe o servidor local da bancada."""
+    """Sobe o servidor local do inspetor."""
     constroi().launch(server_name="127.0.0.1", server_port=porta,
                       inbrowser=abrir, theme=tema.tema(), css=tema.CSS,
                       quiet=True, show_error=True)

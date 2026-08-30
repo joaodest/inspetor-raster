@@ -61,7 +61,7 @@ def plota(x: int, y: int, cor: Cor = PRETO, espessura: int = 1,
     precisa validar limites.
 
     E tambem o ponto observado pelo rastreador: com um rastro aberto,
-    cada chamada vira um passo da bancada, junto com a linha do seu
+    cada chamada vira um passo do inspetor, junto com a linha do seu
     codigo e as variaveis locais daquele instante.
 
     Args:

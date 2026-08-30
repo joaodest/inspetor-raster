@@ -6,7 +6,7 @@ Uso::
 
 O que ainda nao foi implementado simplesmente nao aparece no cartao, e
 sai listado no fim. E o jeito mais rapido de ver o motor inteiro
-funcionando fora da bancada.
+funcionando fora do inspetor.
 """
 
 from __future__ import annotations

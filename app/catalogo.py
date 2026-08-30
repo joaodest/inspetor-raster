@@ -1,4 +1,4 @@
-"""Catalogo de demonstracoes da bancada.
+"""Catalogo de demonstracoes do inspetor.
 
 Cada entrada amarra um exercicio do motor a uma cena concreta: o que
 desenhar, com quais argumentos, e o que os dois pontos arrastaveis da
@@ -8,7 +8,7 @@ rotacao, dependendo do algoritmo escolhido.
 
 As funcoes sao resolvidas pelo nome a cada execucao, nunca guardadas em
 variavel: e isso que faz a recarga a quente valer: salvar o arquivo e
-ver o desenho mudar, sem reiniciar a bancada.
+ver o desenho mudar, sem reiniciar o inspetor.
 """
 
 from __future__ import annotations
@@ -415,6 +415,6 @@ def sonda(algoritmo: Algoritmo, tela: Framebuffer) -> str:
             item.executa(cena)
         except NotImplementedError:
             return PENDENTE
-        except Exception:  # noqa: BLE001 - a sonda nunca derruba a bancada
+        except Exception:  # noqa: BLE001 - a sonda nunca derruba o inspetor
             return COM_ERRO
     return PRONTO

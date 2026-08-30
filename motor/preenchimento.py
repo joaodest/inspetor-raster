@@ -1,7 +1,7 @@
 """Algoritmos de preenchimento de regiões.
 
 Todos escrevem por meio de ``plota`` e leem por meio de ``le_pixel``,
-então a bancada consegue animar o avanço do preenchimento pixel a
+então o inspetor consegue animar o avanço do preenchimento pixel a
 pixel, na mesma ordem em que o seu algoritmo decidiu visitar.
 
 Cuidado recorrente: preenchimento recursivo estoura a pilha do Python

@@ -38,7 +38,7 @@ def principal() -> int:
     quebrados = [item for item in linhas if item[1] == COM_ERRO]
 
     print()
-    print("  BANCADA RASTER".ljust(LARGURA) + f"{feitos} / {len(linhas)}")
+    print("  INSPETOR RASTER".ljust(LARGURA) + f"{feitos} / {len(linhas)}")
     print("  " + "-" * (LARGURA - 2))
 
     familia = ""
@@ -62,7 +62,7 @@ def principal() -> int:
         print(f"  próximo           {pendentes[0].caminho}  "
               f"{pendentes[0].funcao}()")
     else:
-        print("  tudo pronto. rode: python bancada.py")
+        print("  tudo pronto. rode: python inspetor.py")
     print()
     return 1 if quebrados else 0
 

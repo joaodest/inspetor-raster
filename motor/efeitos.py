@@ -3,7 +3,7 @@
 Diferente das primitivas, estas funcoes ja vem implementadas: elas nao
 sao exercicio de rasterizacao, sao as operacoes de edicao que o Paint
 oferece. Todas trabalham diretamente sobre o vetor ``pixels``, por isso
-sao rapidas e nao aparecem no rastreador da bancada.
+sao rapidas e nao aparecem no rastreador do inspetor.
 """
 
 from __future__ import annotations

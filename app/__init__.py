@@ -1,1 +1,1 @@
-"""Aplicacoes que consomem o motor: a bancada e o paint."""
+"""Aplicacoes que consomem o motor: o inspetor e o paint."""

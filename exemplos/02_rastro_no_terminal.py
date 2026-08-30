@@ -5,7 +5,7 @@ Uso::
     python exemplos/02_rastro_no_terminal.py
     python exemplos/02_rastro_no_terminal.py reta_bresenham 2 2 40 14
 
-E a mesma instrumentacao da bancada, sem navegador: serve para colar o
+E a mesma instrumentacao do inspetor, sem navegador: serve para colar o
 resultado em um relatorio ou para depurar por cima do ombro de alguem.
 """
 

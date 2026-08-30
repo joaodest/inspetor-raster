@@ -10,7 +10,7 @@ Uso tipico::
 
 Os modulos ``primitivas``, ``preenchimento``, ``transformacoes`` e
 ``recorte`` guardam os exercicios; ``tracador`` e ``analise`` sao a
-instrumentacao usada pela bancada.
+instrumentacao usada pelo inspetor.
 """
 
 from __future__ import annotations
@@ -98,7 +98,7 @@ def recarrega() -> list[ModuleType]:
     So os modulos que contem exercicios sao recarregados; o nucleo
     (``tela``, ``framebuffer``, ``tracador``) permanece intacto, para
     que o rastreador e a tela ativa sobrevivam a recarga. E o que
-    permite a bancada redesenhar assim que o arquivo e salvo.
+    permite o inspetor redesenhar assim que o arquivo e salvo.
 
     Returns:
         Os modulos efetivamente recarregados, na ordem de dependencia.

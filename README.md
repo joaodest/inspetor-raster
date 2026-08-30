@@ -1,29 +1,29 @@
-# Bancada Raster
+# Inspetor Raster
 
 Ambiente para construir um motor gráfico de paint do zero. Você
-implementa os algoritmos; a bancada mostra cada pixel nascendo, com as
+implementa os algoritmos; o inspetor mostra cada pixel nascendo, com as
 suas próprias variáveis ao lado, na linha do seu código que as escreveu.
 
 ## Comece aqui
 
 ```bash
-git clone https://github.com/joaodest/bancada-raster.git
-cd bancada-raster
-pip install -r requirements.txt   # só o Gradio, e só para a bancada
+git clone https://github.com/joaodest/inspetor-raster.git
+cd inspetor-raster
+pip install -r requirements.txt   # só o Gradio, e só para o inspetor
 python verifica.py                # 0 / 17
-python bancada.py                 # abre em http://127.0.0.1:7860
+python inspetor.py                # abre em http://127.0.0.1:7860
 ```
 
 Depois: abra `motor/primitivas.py`, implemente `reta_dda`, salve, e
-clique em **recarregar módulos** na bancada. O desenho aparece.
+clique em **recarregar módulos** no inspetor. O desenho aparece.
 
 ## O que tem aqui
 
 | Peça | O que é |
 |---|---|
 | `motor/` | O motor gráfico. Zero dependências externas. |
-| `app/` | A bancada: interface Gradio que observa o motor. |
-| `bancada.py` | Sobe a bancada. |
+| `app/` | O inspetor: interface Gradio que observa o motor. |
+| `inspetor.py` | Sobe o inspetor. |
 | `verifica.py` | Painel de progresso dos 17 exercícios, no terminal. |
 | `testes/` | 107 testes. Os de exercício ficam pulados até você implementar. |
 | `exemplos/` | Dois scripts que usam o motor sem navegador. |
@@ -38,7 +38,7 @@ plota(x, y, cor)
 
 Ela escreve um pixel na tela ativa, descarta o que cai fora dos limites
 (recorte implícito, então nenhuma primitiva precisa validar coordenadas)
-e devolve quantos pixels acendeu. É também o ponto que a bancada
+e devolve quantos pixels acendeu. É também o ponto que o inspetor
 observa: com um rastro aberto, cada chamada vira um passo da trilha.
 
 As demais auxiliares, todas em `motor/tela.py`:
@@ -89,7 +89,7 @@ razão de uma rotação positiva parecer horária na prancheta.
 | 17 | `motor/recorte.py` | `recorta_poligono` |
 
 Cada função pendente levanta `NotImplementedError` e traz o roteiro do
-algoritmo na própria docstring. A bancada lê esse roteiro e o mostra no
+algoritmo na própria docstring. O inspetor lê esse roteiro e o mostra no
 painel da direita enquanto o exercício não sai, então não existe uma
 segunda cópia das instruções para desatualizar.
 
@@ -97,7 +97,7 @@ segunda cópia das instruções para desatualizar.
 (composição, sem conta própria) e a segunda escolhe sozinha entre
 Bresenham e DDA, conforme o que você já implementou.
 
-## O que a bancada mostra
+## O que o inspetor mostra
 
 **Prancheta.** Grade de 96 × 64 pixels ampliada, com zoom de 1x a 4x
 seguindo o passo corrente. Clique para mover `p0` ou `p1`. O que cada
@@ -128,7 +128,7 @@ acendeu, grafite onde os dois concordam.
 
 ## Travas de segurança
 
-Um laço infinito no seu algoritmo não trava a bancada. O rastreador
+Um laço infinito no seu algoritmo não trava o inspetor. O rastreador
 interrompe a execução em 40 000 chamadas a `plota` ou 4 segundos, marca
 o rastro como interrompido e ainda mostra tudo o que foi desenhado até
 ali. Exceções também não escapam: elas aparecem no painel, ao lado dos
@@ -171,7 +171,7 @@ python exemplos/02_rastro_no_terminal.py reta_bresenham 2 2 40 14
 ## Dependências
 
 O `motor/` não tem nenhuma: só a biblioteca padrão, incluindo o
-codificador PNG. A bancada precisa de Gradio 6 (que traz o Pillow junto), usado apenas
+codificador PNG. O inspetor precisa de Gradio 6 (que traz o Pillow junto), usado apenas
 para servir a página e desenhar as camadas de leitura sobre a
 prancheta. O pino é `>=6` porque o Gradio 6 moveu `theme` e `css` do
-construtor de `Blocks` para o `launch()`, e a bancada usa a forma nova.
+construtor de `Blocks` para o `launch()`, e o inspetor usa a forma nova.

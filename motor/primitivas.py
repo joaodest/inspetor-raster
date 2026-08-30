@@ -5,7 +5,7 @@ Toda primitiva segue o mesmo contrato:
 * recebe coordenadas em espaço de tela (origem no canto superior
   esquerdo, ``y`` crescendo para baixo);
 * escreve exclusivamente por meio da função auxiliar ``plota``, que é o
-  ponto observado pelo rastreador da bancada;
+  ponto observado pelo rastreador do inspetor;
 * devolve a quantidade de pixels efetivamente acesos;
 * aceita ``alvo=`` para desenhar fora da tela ativa.
 
@@ -47,7 +47,7 @@ def reta_dda(x0: float, y0: float, x1: float, y1: float,
            ``(round(x), round(y))`` e somando os incrementos.
         5. Acumule o retorno de cada ``plota`` e devolva o total.
 
-    O que a bancada vai mostrar: as variáveis ``x`` e ``y`` são float,
+    O que o inspetor vai mostrar: as variáveis ``x`` e ``y`` são float,
     então o painel classifica a aritmética como ponto flutuante, e o
     arredondamento costuma repetir pixels em retas quase horizontais.
 
@@ -85,7 +85,7 @@ def reta_bresenham(x0: float, y0: float, x1: float, y1: float,
            ``erro_dobro <= dx`` faça ``erro += dx`` e ``y += sy``.
         5. Acumule o retorno de cada ``plota`` e devolva o total.
 
-    O que a bancada vai mostrar: nenhuma variável float, nenhum pixel
+    O que o inspetor vai mostrar: nenhuma variável float, nenhum pixel
     repetido e nenhuma lacuna. Compare passo a passo com o DDA na
     entrada "DDA × Bresenham" do catálogo.
 

@@ -3,7 +3,7 @@
 Enquanto um rastro esta aberto, cada chamada a ``tela.plota`` registra
 um ``Passo`` contendo o pixel escrito, a linha exata do codigo-fonte
 que pediu a escrita e uma fotografia das variaveis locais daquele
-momento. E disso que a bancada vive: nao ha nada a instrumentar no seu
+momento. E disso que o inspetor vive: nao ha nada a instrumentar no seu
 algoritmo, basta ele usar ``plota``.
 
 Duas travas protegem a interface de um laco infinito no algoritmo em
@@ -161,13 +161,13 @@ def rastreia(funcao: Callable[..., Any], *args: Any,
     """Executa ``funcao`` capturando cada pixel que ela desenha.
 
     Excecoes levantadas pelo algoritmo nao escapam: elas ficam em
-    ``rastro.erro``, para a bancada poder mostrar o erro ao lado do que
+    ``rastro.erro``, para o inspetor poder mostrar o erro ao lado do que
     ja tinha sido desenhado ate ali.
 
     Args:
         funcao: Algoritmo a observar.
         *args: Argumentos posicionais repassados a ``funcao``.
-        rotulo: Nome exibido na bancada (padrao: nome da funcao).
+        rotulo: Nome exibido no inspetor (padrao: nome da funcao).
         limite_de_passos: Trava de seguranca contra laco infinito.
         limite_de_tempo: Trava de seguranca em segundos.
         **kwargs: Argumentos nomeados repassados a ``funcao``.
@@ -244,7 +244,7 @@ def _le_fonte(codigo: Any, nome: str) -> Fonte:
 
 
 def _fotografa(locais: Mapping[str, Any]) -> dict[str, Any]:
-    """Copia as variaveis locais que fazem sentido exibir na bancada."""
+    """Copia as variaveis locais que fazem sentido exibir no inspetor."""
     fotografia: dict[str, Any] = {}
     for nome, valor in locais.items():
         if nome.startswith("_") or nome in _NOMES_IGNORADOS:

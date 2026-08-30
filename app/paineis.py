@@ -32,7 +32,7 @@ def cabecalho(resultado: Resultado) -> str:
     texto, cor = _estado(resultado)
     return f"""
 <div class="cabecalho">
-  <span class="marca">Bancada Raster</span>
+  <span class="marca">Inspetor Raster</span>
   <span class="disciplina">computação gráfica</span>
   <span class="chamada">{escape(modulo)}.{escape(funcao)}()
     &nbsp;·&nbsp; p0 {resultado.p0} &nbsp;→&nbsp; p1 {resultado.p1}</span>

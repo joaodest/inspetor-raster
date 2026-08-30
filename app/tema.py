@@ -1,4 +1,4 @@
-"""Sistema visual da bancada: paleta, tipografia e CSS.
+"""Sistema visual do inspetor: paleta, tipografia e CSS.
 
 Duas materias convivem na tela e nunca trocam de papel:
 

@@ -1,11 +1,11 @@
 """Execucao, memorizacao e reconstrucao de quadros.
 
-A bancada e uma interface sem estado proprio: cada interacao recalcula
+O inspetor e uma interface sem estado proprio: cada interacao recalcula
 o resultado a partir dos parametros visiveis na tela (algoritmo, os dois
 pontos, espessura). Para que isso nao custe caro, o ultimo punhado de
 execucoes fica memorizado aqui.
 
-E um cache de processo, nao de sessao: a bancada e uma ferramenta local
+E um cache de processo, nao de sessao: o inspetor e uma ferramenta local
 de uma pessoa so. Se um dia ela for servida para varios usuarios ao
 mesmo tempo, este cache precisa virar estado por sessao.
 """

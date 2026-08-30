@@ -1,7 +1,7 @@
 [project]
-name = "bancada-raster"
+name = "inspetor-raster"
 version = "1.0.0"
-description = "Motor grafico raster didatico com bancada de inspecao passo a passo"
+description = "Motor grafico raster didatico com inspecao visual passo a passo"
 requires-python = ">=3.11"
 dependencies = ["gradio>=6,<7"]
 
@@ -21,7 +21,7 @@ ignore = [
 [tool.ruff.lint.per-file-ignores]
 "testes/*" = ["D102", "D103"]
 "exemplos/*" = ["E402"]
-"bancada.py" = ["E402"]
+"inspetor.py" = ["E402"]
 "verifica.py" = ["E402"]
 
 [tool.ruff.lint.pydocstyle]
